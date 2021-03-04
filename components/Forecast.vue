@@ -47,6 +47,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  animation: fadein 1s;
 }
 
 .forecast__left {
@@ -83,5 +84,16 @@ export default {
 .forecast__right__info__value {
   color: #8458ff;
   font-weight: bold;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="weather__app">
+    <div class="weatherApp">
       <section class="header">
         <h1 class="header__title">
-          The weather !
+          Weather forecast
         </h1>
         <h2 class="header__subtitle">
           Next 7 days
@@ -95,20 +95,39 @@ export default {
 </script>
 
 <style scoped>
-.filter {
-  margin: 1rem 0;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(219,229,255);
+  background: linear-gradient(128deg, rgba(219,229,255,1) 0%, rgba(132,88,255,1) 54%, rgba(219,229,255,1) 100%);
+  padding-top: 3rem;
+}
+
+.weatherApp {
+  width: 500px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  color: #3b8070;
+}
+
+.header__title {
+  color: #fff;
   font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-input {
-  margin: 0 .5rem;
+.header {
+  margin-bottom: 2rem;
 }
 
-li {
-  margin-bottom: 1rem;
+.header__subtitle {
+  text-align: center;
+  color: #8458ff;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 </style>

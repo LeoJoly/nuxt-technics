@@ -99,7 +99,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   background: rgb(219,229,255);
-  background: linear-gradient(128deg, rgba(219,229,255,1) 0%, rgba(132,88,255,1) 64%, rgba(219,229,255,1) 100%);
+  background: linear-gradient(128deg, rgba(219,229,255,1) 0%, rgba(160,126,255,1) 64%, rgba(219,229,255,1) 100%);
   padding-top: 3rem;
 }
 

@@ -16,7 +16,7 @@
               min temp
             </label>
             <p class="sliders__filter__info__value">
-              {{ filterValue }}
+              {{ filterValue }}°C
             </p>
           </div>
           <div class="sliders__filter__input">
@@ -29,7 +29,7 @@
               min temp
             </label>
             <p class="sliders__filter__info__value">
-              {{ filterValue }}
+              {{ filterValue }}°C
             </p>
           </div>
           <div class="sliders__filter__input">
@@ -99,17 +99,22 @@ export default {
   width: 100%;
   min-height: 100vh;
   background: rgb(219,229,255);
-  background: linear-gradient(128deg, rgba(219,229,255,1) 0%, rgba(132,88,255,1) 54%, rgba(219,229,255,1) 100%);
+  background: linear-gradient(128deg, rgba(219,229,255,1) 0%, rgba(132,88,255,1) 64%, rgba(219,229,255,1) 100%);
   padding-top: 3rem;
 }
 
 .weatherApp {
-  width: 500px;
+  width: 412px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* -- Header section -- */
+.header {
+  margin-bottom: 2rem;
 }
 
 .header__title {
@@ -119,15 +124,51 @@ export default {
   text-align: center;
 }
 
-.header {
-  margin-bottom: 2rem;
-}
-
 .header__subtitle {
   text-align: center;
   color: #8458ff;
   font-weight: normal;
   text-transform: uppercase;
   font-size: .9rem;
+}
+
+/* -- Header section -- */
+.sliders {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sliders__filter {
+  width: 43%;
+}
+
+.sliders__filter__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sliders__filter__info__label {
+  color: #fff;
+  font-size: .6rem;
+  text-transform: uppercase;
+}
+
+.sliders__filter__info__value {
+  color: #8458ff;
+  font-weight: bold;
+}
+
+.sliders__filter__input {
+  height: 30px;
+  margin-top: .3rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

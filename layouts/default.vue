@@ -64,6 +64,13 @@ ul {
   list-style: none;
 }
 
+ul, li {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: 0;
+}
+
 .links {
   width: 50%;
   display: flex;

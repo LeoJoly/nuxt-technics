@@ -38,8 +38,8 @@
         </div>
       </section>
       <section class="weatherForecast">
-        <ul v-for="forecastDay in filterData(forecastDays)" :key="forecastDay.date" class="weather__forecasts">
-          <li>
+        <ul class="weather__forecasts">
+          <li v-for="forecastDay in filterData(forecastDays)" :key="forecastDay.date">
             <Forecast
               :date="forecastDay.date"
               :minTemp="forecastDay.day.mintemp_c"
@@ -165,10 +165,104 @@ export default {
 .sliders__filter__input {
   height: 30px;
   margin-top: .3rem;
+  padding: 0 1rem;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 999px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 7px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #dbe5ff;
+  border: 1px solid rgba(1, 1, 1, 0);
+  border-radius: 10.7px;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background: #8458ff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e0e9ff;
+}
+
+input[type=range]::-moz-range-track {
+  background: #dbe5ff;
+  border: 1px solid rgba(1, 1, 1, 0);
+  border-radius: 10.7px;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #8458ff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 7px 0;
+  color: transparent;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #d6e1ff;
+  border: 1px solid rgba(1, 1, 1, 0);
+  border-radius: 21.4px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #dbe5ff;
+  border: 1px solid rgba(1, 1, 1, 0);
+  border-radius: 21.4px;
+}
+
+input[type=range]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #8458ff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #dbe5ff;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #e0e9ff;
 }
 </style>

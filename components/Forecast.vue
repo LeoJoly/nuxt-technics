@@ -1,14 +1,14 @@
 <template>
   <div class="forecast">
-    <div class="forecats__left">
-      <div class="forecat__left__icon">
+    <div class="forecast__left">
+      <div class="forecast__left__icon">
         <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="Weather icon">
       </div>
       <div class="forecast__left__date">
         {{ date }}
       </div>
     </div>
-    <div class="forecats__right">
+    <div class="forecast__right">
       <div class="forecast__right__info">
         <p class="forecast__right__info__label">
           Min temp
@@ -35,3 +35,53 @@ export default {
   props: ['date', 'minTemp', 'rainChance']
 }
 </script>
+
+<style scoped>
+.forecast {
+  width: 412px;
+  height: 114px;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.forecast__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast__left__date {
+  width: 30px;
+  margin-left: .3rem;
+  font-weight: bold;
+}
+
+.forecast__right {
+  width: 147px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.forecast__right__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast__right__info__label {
+  text-transform: uppercase;
+  font-size: .6rem;
+}
+
+.forecast__right__info__value {
+  color: #8458ff;
+  font-weight: bold;
+}
+</style>

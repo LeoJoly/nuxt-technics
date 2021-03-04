@@ -1,5 +1,24 @@
 <template>
   <div>
+    <nav>
+      <ul>
+        <li>
+          <NuxtLink to="/">
+            Home
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/counter">
+            Counter
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/weather">
+            Weather
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
     <Nuxt />
   </div>
 </template>

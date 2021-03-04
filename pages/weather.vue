@@ -4,7 +4,12 @@
       <h1 class="weather__title">
         The weather !
       </h1>
-      <ul v-for="forecastDay in forecastDays" :key="forecastDay.date" class="weather__forecasts">
+      <label for="">
+        <p>Filtrer les données :</p>
+        <input v-model="filterValue" type="range" min="-10" max="30" step="1">
+        <p>{{ filterValue }}</p>
+      </label>
+      <ul v-for="forecastDay in filterData(forecastDays)" :key="forecastDay.date" class="weather__forecasts">
         <li>
           <div class="weather__forecasts__forecast">
             <h2>{{ forecastDay.date }}</h2>
@@ -42,6 +47,16 @@ export default {
     })
 
     return { forecastDays }
+  },
+  data () {
+    return {
+      filterValue: 0
+    }
+  },
+  methods: {
+    filterData (weatherData) {
+      return weatherData.filter(data => data.day.mintemp_c >= this.filterValue)
+    }
   }
 }
 </script>

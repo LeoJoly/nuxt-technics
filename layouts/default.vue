@@ -1,19 +1,19 @@
 <template>
   <div>
     <nav>
-      <ul>
+      <ul class="links">
         <li>
-          <NuxtLink to="/">
+          <NuxtLink to="/" class="link">
             Home
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/counter">
+          <NuxtLink to="/counter" class="link">
             Counter
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/weather">
+          <NuxtLink to="/weather" class="link">
             Weather
           </NuxtLink>
         </li>
@@ -50,6 +50,71 @@ html {
   margin: 0;
 }
 
+nav {
+  background-color: #3b8070;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: #526488;
+}
+
+.container {
+  margin: 3rem auto;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -62,20 +127,5 @@ html {
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
 }
 </style>

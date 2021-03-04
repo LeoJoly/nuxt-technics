@@ -1,18 +1,18 @@
 <template>
-  <div class="weather">
+  <div class="container">
     <div>
-      <h1 class="weather__title">
+      <h1 class="title">
         The weather !
       </h1>
-      <label for="">
-        <p>Filtrer les données :</p>
+      <div class="filter">
+        <label for="">Filtrer les températures :</label>
         <input v-model="filterValue" type="range" min="-10" max="30" step="1">
         <p>{{ filterValue }}</p>
-      </label>
+      </div>
       <ul v-for="forecastDay in filterData(forecastDays)" :key="forecastDay.date" class="weather__forecasts">
         <li>
           <div class="weather__forecasts__forecast">
-            <h2>{{ forecastDay.date }}</h2>
+            <h2 class="subtitle">{{ forecastDay.date }}</h2>
             <p>Température maximum : {{ forecastDay.day.maxtemp_c }}°C</p>
             <p>Température minimum : {{ forecastDay.day.mintemp_c }}°C</p>
             <p>Chances de pluie : {{ forecastDay.day.daily_chance_of_rain }}%</p>
@@ -60,3 +60,22 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.filter {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3b8070;
+  font-weight: bold;
+}
+
+input {
+  margin: 0 .5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+</style>

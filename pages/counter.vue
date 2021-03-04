@@ -1,10 +1,10 @@
 <template>
-  <div class="counter">
+  <div class="container">
     <div>
-      <h1 class="counter__title">
+      <h1 class="title">
         The counter !
       </h1>
-      <button class="counter__btn" @click="handleClick()">
+      <button class="button--green" @click="handleClick()">
         I'm the counter {{ count }}
       </button>
     </div>
